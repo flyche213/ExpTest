@@ -4,7 +4,7 @@ Documentation  Facebook Test
 Library  SeleniumLibrary
 Resource  ../Data/InputData.robot
 Resource  ../Resources/FBApp.robot
-Test Setup  Start  ${Webpage}
+Test Setup  Start  ${Facebook}
 Test Teardown  Close Browser
 
 

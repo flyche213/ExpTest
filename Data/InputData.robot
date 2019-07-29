@@ -16,6 +16,7 @@ ${custom}  sex  -1
 #Configurations
 ${Browser}  Chrome
 ${URL}  https://www.facebook.com/
-&{Webpage}  Browser=Chrome  URL=https://www.facebook.com/
+&{Facebook}  Browser=Chrome  URL=https://www.facebook.com/
+&{Amazon}  Browser=Chrome  URL=https://www.Amazon.com/
 
 

@@ -3,6 +3,7 @@ Documentation  Facebook Keywords
 
 
 *** Keywords ***
+#TODO Create dictionary for input text
 Enter Credentials
   [Tags]  Smoke
   [Arguments]  ${UserData}
