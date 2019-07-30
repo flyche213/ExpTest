@@ -4,6 +4,7 @@ Documentation  Amazon Keywords
 
 *** Keywords ***
 AmazonLogIn
+    [Tags]  IfELSE
     Click Link  xpath://a[text()='Your Amazon.com']
     AmazonCredentials  ${Amazon_User1}
     Click Link  xpath=//a[@id='createAccountSubmit']
