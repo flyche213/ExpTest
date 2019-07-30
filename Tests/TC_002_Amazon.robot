@@ -11,7 +11,10 @@ Test Teardown  Close Browser
 
 *** Test Cases ***
 Amazon Authentication Test Case
+   [Documentation]  Login Capabilities and Navigation
+    [Tags]  Smoke
 
+#TODO Loop with several users
 #shows error message
     Run Keyword If  ${Value} > 20  AmazonLogIn
     ...  ELSE  Log  Error in Logging In
