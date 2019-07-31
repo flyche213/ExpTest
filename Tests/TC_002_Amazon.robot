@@ -1,6 +1,6 @@
 
 *** Settings ***
-Documentation  Facebook Test
+Documentation  Amazon Test Login Capabilities and Navigation
 Library  SeleniumLibrary
 Resource  ../Data/InputData.robot
 Resource  ../Resources/FBApp.robot
@@ -10,17 +10,26 @@ Test Teardown  Close Browser
 
 
 *** Test Cases ***
-Amazon Authentication Test Case
-   [Documentation]  Login Capabilities and Navigation
-    [Tags]  Smoke
-
+#TODO Change these cases into 1 single case
 #TODO Loop with several users
-#shows error message
-    Run Keyword If  ${Value} > 20  AmazonLogIn
+Amazon Authentication Test Case User One
+    Run Keyword If  ${Value} > 20  AmazonLogIn  ${Amazon_User1}
     ...  ELSE  Log  Error in Logging In
     AmazonNavigate
 
 
-# Xpath from chrome doesnt work
-    #Click Link  //*[@id="contentGrid_549694"]/div/div[2]/div[2]/div/div/a/img
-    #sleep  3s
+Amazon Authentication Test Case Invalid User
+    Run Keyword If  ${Value} > 20  AmazonLogIn  ${Amazon_User2}
+    ...  ELSE  Log  Error in Logging In
+    AmazonNavigate
+
+
+Amazon Authentication Test Case View Error Message
+#Logs error message
+    [Tags]  null
+    Run Keyword If  ${Value} > 200  AmazonLogIn  ${Amazon_User3}
+    ...  ELSE  Log  Error in Logging In
+
+
+
+

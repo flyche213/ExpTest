@@ -5,8 +5,9 @@ Documentation  Amazon Keywords
 *** Keywords ***
 AmazonLogIn
     [Tags]  IfELSE
+    [Arguments]  ${Creditentials}
     Click Link  xpath://a[text()='Your Amazon.com']
-    AmazonCredentials  ${Amazon_User1}
+    AmazonCredentials  ${Creditentials}
     Click Link  xpath=//a[@id='createAccountSubmit']
     sleep  3s
 
