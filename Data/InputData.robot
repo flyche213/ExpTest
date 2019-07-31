@@ -2,6 +2,7 @@
 Documentation  Facebook Test Data
 
 *** Variables ***
+${CSV_Info}  C:\\Users\\C60134A\\PycharmProjects\\ExpTest\\Data\\User.csv
 ${VALUE}  100
 #Dictionary
 &{Login_User1}  email=hello  password=world

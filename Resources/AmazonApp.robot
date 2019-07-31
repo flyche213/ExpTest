@@ -43,3 +43,8 @@ Amazon Authentication Test Case View Error Message
     [Tags]  null
     Run Keyword If  ${Value} > 200  AmazonLogIn  ${Amazon_User3}
     ...  ELSE  Log  Error in Logging In
+
+Amazon For Loop
+        [Arguments]  ${LogInScenarios}
+        :For  ${CSV_Data}  IN  @{LogInScenarios}
+        \  AmazonLogIn  ${CSV_Data}
