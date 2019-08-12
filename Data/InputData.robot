@@ -7,9 +7,9 @@ ${VALUE}  100
 #Dictionary
 &{Login_User1}  email=hello  password=world
 &{Login_User2}  email=hello@login  password=fbtest
-&{Amazon_User1}  email=emailone  password=Default
-&{Amazon_User2}  email=emailtwo  password=password
-&{Amazon_User3}  email=emailthree  password=secret
+#&{Amazon_User1}  email=emailone  password=Default
+#&{Amazon_User2}  email=emailtwo  password=password
+#&{Amazon_User3}  email=emailthree  password=secret
 &{Webpage}  Browser=Chrome  URL=https://www.facebook.com/
 #Links
 #xpaths

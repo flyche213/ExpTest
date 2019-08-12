@@ -3,6 +3,13 @@ Documentation  Amazon Keywords
 
 
 *** Keywords ***
+Amazon Test Link
+    Open Browser  https://www.amazon.com/  ${Browser}
+    Click Link  //a[@href="/gp/goldbox?ref_=nav_cs_gb_azl"]
+    Click Element  //button[@id="a-autoid-3-announce"]
+    sleep  3s
+
+    Close Browser
 AmazonLogIn
     [Tags]  IfELSE
     [Arguments]  ${Creditentials}
@@ -16,8 +23,8 @@ AmazonLogIn
 AmazonCredentials
     [Tags]  Smoke
     [Arguments]  ${UserData}
-    Input Text  id:ap_email  ${UserData.email}
-    Input Text  id:ap_password  ${UserData.password}
+    Input Text  id:ap_email  ${UserData[0]}
+    Input Text  id:ap_password  ${UserData[1]}
 
 AmazonNavigate
     Click Link  xpath=//a[@class='a-link-nav-icon']
