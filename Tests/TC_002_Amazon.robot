@@ -17,9 +17,13 @@ Test Teardown  Close Browser
   #     :For  ${MyItem}  IN  @{items}
    #    \  AmazonLogIn  ${MyItem}
 
+Link Test
+    Amazon Test Link
 View CSV
     ${LogInScenarios} =  DataManager.Get CSV Data  ${CSV_Info}
     Amazon For Loop  ${LogInScenarios}
+    Close all Browsers
+
 
 
 

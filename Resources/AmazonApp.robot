@@ -6,7 +6,7 @@ Documentation  Amazon Keywords
 Amazon Test Link
     Open Browser  https://www.amazon.com/  ${Browser}
     Click Link  //a[@href="/gp/goldbox?ref_=nav_cs_gb_azl"]
-    Click Element  //button[@id="a-autoid-3-announce"]
+    #Click Element  //button[@id="a-autoid-3-announce"]
     sleep  3s
 
     Close Browser
