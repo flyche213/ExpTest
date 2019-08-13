@@ -7,8 +7,8 @@ Documentation  Facebook Keywords
 Enter Credentials
   [Tags]  Smoke
   [Arguments]  ${UserData}
-  Input Text  id:email  ${UserData.email}
-  Input Text  id:pass  ${UserData.password}
+  Input Text  id:email  ${UserData[0]}
+  Input Text  id:pass  ${UserData[1]}
 
 Enter Info
   [Tags]  Smoke
@@ -23,8 +23,15 @@ Start
 
 
 LogIn
-  Enter Credentials  ${Login_User1}
+  [Arguments]  ${Credentials}
+  Enter Credentials  ${Credentials}
   Enter Info
+
+
+FaceBook For Loop
+        [Arguments]  ${LogInScenarios}
+        :For  ${CSV_FBData}  IN  @{LogInScenarios}
+        \  LogIn  ${CSV_FBData}
 
 
 InvalidLogIn

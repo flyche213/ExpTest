@@ -3,10 +3,11 @@ Documentation  Facebook Test Data
 
 *** Variables ***
 ${CSV_Info}  C:\\Users\\C60134A\\PycharmProjects\\ExpTest\\Data\\User.csv
+${CSV_FBInfo}  C:\\Users\\C60134A\\PycharmProjects\\ExpTest\\Data\\FBUser.csv
 ${VALUE}  100
 #Dictionary
-&{Login_User1}  email=hello  password=world
-&{Login_User2}  email=hello@login  password=fbtest
+#&{Login_User1}  email=hello  password=world
+#&{Login_User2}  email=hello@login  password=fbtest
 #&{Amazon_User1}  email=emailone  password=Default
 #&{Amazon_User2}  email=emailtwo  password=password
 #&{Amazon_User3}  email=emailthree  password=secret
